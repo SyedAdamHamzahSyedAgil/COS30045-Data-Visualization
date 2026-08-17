@@ -62,3 +62,12 @@ energy-webpage-v1
 │
 ├── index.html
 └── README.md
+
+## Generative AI Reflection
+
+The Generative AI that was used for this section was CHATGPT.
+ I used chatgpt to help me with debugging mistakes I had made in the script.js file.
+ 
+The change that was made was instead of making it the year Element a Variable I had made it into a constant with the If statement.
+
+What I have learned is there are more effective ways that codes and scripts are able to be written that are more reliable.
