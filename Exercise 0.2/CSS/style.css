@@ -120,7 +120,7 @@ main {
 .button {
     display: inline-block;
     background-color: #ffffff;
-    color: #0b4f8a;
+    color: #C76E00;
     text-decoration: none;
     padding: 13px 25px;
     border-radius: 6px;
@@ -160,7 +160,7 @@ main {
 }
 
 .content-section h2 {
-    color: #0b4f8a;
+    color: #C76E00;
     font-size: 30px;
     margin-bottom: 20px;
 }
@@ -198,7 +198,7 @@ main {
 }
 
 .info-card h3 {
-    color: #0b4f8a;
+    color: #C76E00;
     margin-bottom: 12px;
 }
 
@@ -213,7 +213,7 @@ main {
 }
 
 .faq-section h2 {
-    color: #0b4f8a;
+    color: #C76E00;
     font-size: 30px;
     margin-bottom: 25px;
 }
@@ -249,7 +249,7 @@ main {
 
 .faq-question span {
     font-size: 24px;
-    color: #1b75bc;
+    color: #C76E00;
     transition: transform 0.3s ease;
 }
 
