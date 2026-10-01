@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appliance Energy Consumption</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/visualisation.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo-link">
+                <span class="logo" style="width: auto; height: auto; font-size: 20px; font-weight: bold; color: #C76E00;">
+                    Energy Consumption
+                </span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="televisions.html">Televisions</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Appliance Energy Consumption</h1>
+            <p>Explore television energy consumption and compare different screen technologies.</p>
+        </section>
+
+        <section class="content-section">
+            <div class="chart-section">
+                <h2>Television Energy Consumption Histogram</h2>
+                <p>
+                    Use the filters below to explore the energy consumption
+                    distribution for different television screen technologies.
+                </p>
+
+                <div id="filters_screen"></div>
+                <div id="histogram-chart"></div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="chart-section">
+                <h2>Television Star Rating vs Energy Consumption</h2>
+                <p>
+                    Explore the relationship between television star ratings
+                    and energy consumption. Colours represent screen technology.
+                </p>
+                <div id="scatterplot" class="responsive-svg-container"></div>
+            </div>
+        </section>
+
+        <section class="content-section alternate-section">
+            <h2>Understanding Energy Consumption</h2>
+            <p>
+                Television energy consumption can vary depending on screen
+                technology, screen size, model and usage. The histogram helps
+                visualize how energy consumption values are distributed
+                across the selected televisions.
+            </p>
+        </section>
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">
+                    What is a histogram?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        A histogram groups numerical values into intervals
+                        and shows how frequently values occur in each interval.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">
+                    What does energy consumption mean?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        Energy consumption is the amount of electrical energy
+                        used by an appliance over a period of time.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">
+                    How do the screen filters work?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        The filters let you view all screen technologies or
+                        select individual technologies such as LCD, LED and OLED.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Appliance Energy Consumption</p>
+    </footer>
+
+    <script src="JS/shared-constants.js"></script>
+    <script src="JS/histogram.js"></script>
+    <script src="JS/interactions.js"></script>
+    <script src="JS/load-data.js"></script>
+    <script src="JS/scatterplot.js"></script>
+
+
+</body>
+</html>

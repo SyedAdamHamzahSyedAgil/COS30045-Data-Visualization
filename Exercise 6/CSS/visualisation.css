@@ -1,0 +1,172 @@
+
+
+.responsive-svg-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    overflow-x: auto;
+}
+
+
+#histogram-chart svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+
+.histogram-bar {
+    transition: fill 0.2s ease;
+}
+
+.histogram-bar:hover {
+    fill: #f28e2b;
+}
+
+
+.histogram-x-axis path,
+.histogram-x-axis line,
+.histogram-y-axis path,
+.histogram-y-axis line {
+    stroke: #555555;
+}
+
+.histogram-x-axis text,
+.histogram-y-axis text {
+    fill: #333333;
+    font-size: 12px;
+}
+
+
+#histogram-chart .axis-label {
+    fill: #333333;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.chart-section {
+    padding: 30px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.chart-section h2 {
+    margin-bottom: 12px;
+}
+
+.chart-section p {
+    line-height: 1.6;
+}
+
+
+#filters_screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px auto;
+}
+
+.filter-button {
+    padding: 12px 24px;
+    border: 2px solid #4682b4;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #4682b4;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.25s ease,
+                color 0.25s ease,
+                transform 0.25s ease;
+}
+
+.filter-button:hover {
+    background-color: #e6f0fa;
+    transform: translateY(-2px);
+}
+
+.filter-button.active {
+    background-color: #4682b4;
+    color: #ffffff;
+}
+
+.filter-button:focus-visible {
+    outline: 3px solid #f28e2b;
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    #filters_screen {
+        gap: 8px;
+    }
+
+    .filter-button {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
+
+
+#scatterplot {
+    width: 100%;
+    max-width: 960px;
+    margin: 20px auto;
+    overflow-x: auto;
+}
+
+#scatterplot svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+#scatterplot .scatter-point {
+    stroke: none;
+}
+
+#scatterplot .x-axis path,
+#scatterplot .x-axis line,
+#scatterplot .y-axis path,
+#scatterplot .y-axis line {
+    stroke: #555555;
+}
+
+#scatterplot .x-axis text,
+#scatterplot .y-axis text {
+    font-size: 12px;
+    fill: #222222;
+}
+
+#scatterplot .axis-label {
+    font-size: 15px;
+    font-weight: bold;
+    fill: #222222;
+}
+
+#scatterplot .scatter-legend text {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#scatterplot .scatter-tooltip {
+    pointer-events: none;
+}
+
+#scatterplot .scatter-tooltip rect {
+    fill: #C76E00;
+    stroke: none;
+}
+
+#scatterplot .scatter-tooltip text {
+    fill: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+}
