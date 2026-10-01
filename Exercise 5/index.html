@@ -1,0 +1,552 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Appliance Energy Consumption - Home</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo-link">
+                <img src="Images/PowerIcon.png" alt="Power Logo" class="logo">
+            </a>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html" class="active">Home</a>
+                </li>
+
+                <li>
+                    <a href="televisions.html">Televisions</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="hero-content">
+
+                <h1>Appliance Energy Consumption</h1>
+
+                <p>
+                    Understanding how household appliances consume electricity
+                    can help Australian households make smarter and more
+                    energy-efficient choices.
+                </p>
+
+                <a href="televisions.html" class="button">
+                    Explore Televisions
+                </a>
+
+            </div>
+        </section>
+
+
+        <section class="svg-section" aria-labelledby="house-title">
+
+            <h2 id="house-title">SVG House</h2>
+
+            <svg
+                class="house-svg"
+                viewBox="0 0 440 440"
+                role="img"
+                aria-labelledby="house-svg-title house-svg-description"
+            >
+
+                <title id="house-svg-title">
+                    A simple house drawn with SVG
+                </title>
+
+                <desc id="house-svg-description">
+                    A brown house with an orange roof, blue windows, a tree,
+                    a yellow sun and a curved path.
+                </desc>
+
+                <rect
+                    class="sky"
+                    x="0"
+                    y="0"
+                    width="440"
+                    height="267"
+                />
+
+                <rect
+                    class="ground"
+                    x="0"
+                    y="267"
+                    width="440"
+                    height="173"
+                />
+
+                <circle
+                    class="sun"
+                    cx="375"
+                    cy="72"
+                    r="30"
+                />
+
+                <rect
+                    class="tree-trunk"
+                    x="62"
+                    y="225"
+                    width="18"
+                    height="87"
+                />
+
+                <circle
+                    class="tree-leaves tree-leaves-left"
+                    cx="52"
+                    cy="194"
+                    r="26"
+                />
+
+                <circle
+                    class="tree-leaves"
+                    cx="90"
+                    cy="194"
+                    r="26"
+                />
+
+                <circle
+                    class="tree-leaves tree-leaves-center"
+                    cx="71"
+                    cy="214"
+                    r="25"
+                />
+
+                <path
+                    class="roof"
+                    d="M133 178 222 89l89 89Z"
+                />
+
+                <rect
+                    class="house-wall"
+                    x="133"
+                    y="178"
+                    width="178"
+                    height="134"
+                />
+
+                <rect
+                    class="window-frame"
+                    x="151"
+                    y="196"
+                    width="36"
+                    height="36"
+                />
+
+                <rect
+                    class="window-frame"
+                    x="258"
+                    y="196"
+                    width="36"
+                    height="36"
+                />
+
+                <rect
+                    class="door"
+                    x="204"
+                    y="241"
+                    width="36"
+                    height="71"
+                />
+
+                <circle
+                    class="door-knob"
+                    cx="231"
+                    cy="276"
+                    r="4.5"
+                />
+
+                <path
+                    class="path"
+                    d="M207 312C167 321 126 333 125 357c-1 22 35 35 81 79"
+                />
+
+                <path
+                    class="path"
+                    d="M222 312C181 323 145 335 145 354c0 20 39 35 101 82"
+                />
+
+                <text
+                    class="house-label"
+                    x="338"
+                    y="258"
+                >
+                    House
+                </text>
+
+            </svg>
+
+
+            <table class="coordinate-table">
+
+                <caption>
+                    SVG element coordinates (viewBox: 440 x 440)
+                </caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Element</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Size or key points</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <th scope="row">Sky</th>
+                        <td>x=0, y=0</td>
+                        <td>440 x 267</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Ground</th>
+                        <td>x=0, y=267</td>
+                        <td>440 x 173</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Sun</th>
+                        <td>cx=375, cy=72</td>
+                        <td>radius=30</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Tree trunk</th>
+                        <td>x=62, y=225</td>
+                        <td>18 x 87</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Roof</th>
+                        <td>starts at (133, 178)</td>
+                        <td>peak (222, 89), ends (311, 178)</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">House wall</th>
+                        <td>x=133, y=178</td>
+                        <td>178 x 134</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Windows</th>
+                        <td>(151, 196) and (258, 196)</td>
+                        <td>36 x 36 each</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Door</th>
+                        <td>x=204, y=241</td>
+                        <td>36 x 71</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>x=338, y=258</td>
+                        <td>House</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <section
+            class="chart-section"
+            aria-labelledby="bar-chart-title"
+        >
+
+            <h2 id="bar-chart-title">
+                What TV Screen Type Consumes the Most Energy?
+            </h2>
+
+            <p>
+                This chart compares the average energy consumption of
+                different 55-inch TV screen types.
+            </p>
+
+            <div
+                id="bar-chart"
+                class="responsive-svg-container"
+                aria-label="Bar chart showing average energy consumption of different TV screen types"
+            ></div>
+
+        </section>
+
+        <section class="chart-section" aria-labelledby="line-chart-title">
+            <h2 id="line-chart-title">
+                Average Electricity Spot Price in Australia
+            </h2>
+
+            <p>
+                This line chart shows the average cost per megawatt
+                hour of electricity in Australia from 1998 to 2024.
+            </p>
+
+            <div id="line-chart" class="responsive-svg-container"></div>
+        </section>
+
+        <section class="chart-section" aria-labelledby="donut-chart-title">
+            <h2 id="donut-chart-title">
+                Proportion of TV Models by Screen Size
+            </h2>
+
+            <p>
+                This donut chart shows the proportion of small, medium
+                and large television models in the dataset.
+            </p>
+
+            <div
+                id="donut-chart"
+                class="responsive-svg-container"
+                role="img"
+                aria-label="Donut chart showing the proportion of small, medium and large TV models">
+            </div>
+        </section>
+
+
+        <section class="content-section">
+
+            <h2>Energy Consumption in Australia</h2>
+
+            <p>
+                Household appliances are an important part of everyday life in
+                Australia. Appliances such as televisions, refrigerators,
+                washing machines and air conditioners can contribute
+                significantly to household electricity consumption.
+            </p>
+
+            <p>
+                The amount of energy an appliance uses depends on several
+                factors, including its power rating, how frequently it is used,
+                how long it operates and its overall energy efficiency.
+                Understanding these factors can help households reduce
+                unnecessary electricity consumption.
+            </p>
+
+
+            <div class="info-cards">
+
+                <div class="info-card">
+
+                    <h3>Energy Efficiency</h3>
+
+                    <p>
+                        Energy-efficient appliances can provide the same
+                        functionality while using less electricity.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <h3>Usage Habits</h3>
+
+                    <p>
+                        How often and how long an appliance is used can have a
+                        major impact on its total energy consumption.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <h3>Smart Choices</h3>
+
+                    <p>
+                        Comparing appliance energy ratings can help consumers
+                        make more informed purchasing decisions.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="content-section alternate-section">
+
+            <h2>Why Energy Consumption Matters</h2>
+
+            <p>
+                Electricity consumption affects both household expenses and
+                the environment. Reducing unnecessary energy use can help
+                households manage electricity costs while also supporting
+                Australia's broader energy-efficiency goals.
+            </p>
+
+            <p>
+                Energy labels and product specifications can provide useful
+                information when comparing appliances. Consumers can use this
+                information to consider both the initial purchase price and
+                the potential ongoing electricity costs.
+            </p>
+
+        </section>
+
+
+        <section class="faq-section">
+
+            <h2>Frequently Asked Questions</h2>
+
+
+            <div class="faq-item">
+
+                <button
+                    type="button"
+                    class="faq-question"
+                    aria-expanded="false"
+                    aria-controls="faq-answer-1"
+                >
+                    <span>What affects appliance energy consumption?</span>
+                    <span aria-hidden="true">+</span>
+                </button>
+
+                <div
+                    class="faq-answer"
+                    id="faq-answer-1"
+                >
+
+                    <p>
+                        Appliance energy consumption can be affected by the
+                        appliance's power rating, how frequently it is used,
+                        how long it operates and its energy efficiency.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button
+                    type="button"
+                    class="faq-question"
+                    aria-expanded="false"
+                    aria-controls="faq-answer-2"
+                >
+                    <span>How can households reduce energy consumption?</span>
+                    <span aria-hidden="true">+</span>
+                </button>
+
+                <div
+                    class="faq-answer"
+                    id="faq-answer-2"
+                >
+
+                    <p>
+                        Households can reduce energy consumption by choosing
+                        efficient appliances, switching appliances off when
+                        they are not needed and reducing unnecessary usage.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button
+                    type="button"
+                    class="faq-question"
+                    aria-expanded="false"
+                    aria-controls="faq-answer-3"
+                >
+                    <span>Why are energy ratings useful?</span>
+                    <span aria-hidden="true">+</span>
+                </button>
+
+                <div
+                    class="faq-answer"
+                    id="faq-answer-3"
+                >
+
+                    <p>
+                        Energy ratings provide consumers with information that
+                        can help them compare the expected efficiency of
+                        different appliances before making a purchase.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button
+                    type="button"
+                    class="faq-question"
+                    aria-expanded="false"
+                    aria-controls="faq-answer-4"
+                >
+                    <span>Do larger appliances always use more electricity?</span>
+                    <span aria-hidden="true">+</span>
+                </button>
+
+                <div
+                    class="faq-answer"
+                    id="faq-answer-4"
+                >
+
+                    <p>
+                        Not necessarily. Energy consumption depends on the
+                        appliance's efficiency, power rating and usage patterns,
+                        rather than size alone.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            &copy;
+            <span id="current-year"></span>
+            Syed Adam Hamzah.
+            ChatGPT Generative AI Used for Debugging.
+        </p>
+
+    </footer>
+
+
+    <script src="JS/script.js"></script>
+    <script src="JS/bar-chart.js"></script>
+    <script src="JS/line-chart.js"></script>
+    <script src="JS/donut-chart.js"></script>
+
+</body>
+
+</html>
