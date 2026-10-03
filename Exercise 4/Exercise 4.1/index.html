@@ -1,129 +1,605 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Appliance Energy Consumption - Home</title>
+
     <link rel="stylesheet" href="CSS/style.css">
+
+    <style>
+        .house-comparison {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .house-version {
+            text-align: center;
+        }
+
+        .house-version h3 {
+            margin-bottom: 15px;
+        }
+
+        .house-version .house-svg {
+            width: 100%;
+            max-width: 440px;
+            height: auto;
+        }
+
+        @media (max-width: 800px) {
+            .house-comparison {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
 </head>
+
 <body>
 
     <header>
+
         <nav class="navbar">
+
             <a href="index.html" class="logo-link">
-                <img src="Images/PowerIcon.png" alt="Power Logo" class="logo">
+                <img src="Images/PowerIcon.png"
+                     alt="Power Logo"
+                     class="logo">
             </a>
 
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="televisions.html">Televisions</a></li>
-                <li><a href="about.html">About Us</a></li>
+
+                <li>
+                    <a href="index.html" class="active">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="televisions.html">
+                        Televisions
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About Us
+                    </a>
+                </li>
+
             </ul>
+
         </nav>
+
     </header>
+
 
     <main>
 
         <section class="hero">
+
             <div class="hero-content">
-                <h1>Appliance Energy Consumption</h1>
+
+                <h1>
+                    Appliance Energy Consumption
+                </h1>
+
                 <p>
                     Understanding how household appliances consume electricity
                     can help Australian households make smarter and more
                     energy-efficient choices.
                 </p>
-                <a href="televisions.html" class="button">Explore Televisions</a>
+
+                <a href="televisions.html" class="button">
+                    Explore Televisions
+                </a>
+
             </div>
+
         </section>
 
-        <section class="svg-section" aria-labelledby="house-title">
-            <h2 id="house-title">SVG House</h2>
-            <svg class="house-svg" viewBox="0 0 440 440" role="img" aria-labelledby="house-svg-title house-svg-description">
-                <title id="house-svg-title">A simple house drawn with SVG</title>
-                <desc id="house-svg-description">A brown house with an orange roof, blue windows, a tree, a yellow sun and a curved path.</desc>
 
-                <rect class="sky" x="0" y="0" width="440" height="267" />
-                <rect class="ground" x="0" y="267" width="440" height="173" />
-                <circle class="sun" cx="375" cy="72" r="30" />
+        <section class="svg-section"
+                 aria-labelledby="house-title">
 
-                <rect class="tree-trunk" x="62" y="225" width="18" height="87" />
-                <circle class="tree-leaves tree-leaves-left" cx="52" cy="194" r="26" />
-                <circle class="tree-leaves" cx="90" cy="194" r="26" />
-                <circle class="tree-leaves tree-leaves-center" cx="71" cy="214" r="25" />
+            <h2 id="house-title">
+                SVG House - Before and After
+            </h2>
 
-                <path class="roof" d="M133 178 222 89l89 89Z" />
-                <rect class="house-wall" x="133" y="178" width="178" height="134" />
-                <rect class="window-frame" x="151" y="196" width="36" height="36" />
-                <rect class="window-frame" x="258" y="196" width="36" height="36" />
-                <rect class="door" x="204" y="241" width="36" height="71" />
-                <circle class="door-knob" cx="231" cy="276" r="4.5" />
+            <p>
+                This section demonstrates how SVG shapes can be created,
+                customised and modified using SVG coordinates.
+            </p>
 
-                <path class="path" d="M207 312C167 321 126 333 125 357c-1 22 35 35 81 79" />
-                <path class="path" d="M222 312C181 323 145 335 145 354c0 20 39 35 101 82" />
-                <text class="house-label" x="338" y="258">House</text>
-            </svg>
+
+            <div class="house-comparison">
+
+
+                <div class="house-version">
+
+                    <h3>
+                        Before Editing
+                    </h3>
+
+
+                    <svg class="house-svg"
+                         viewBox="0 0 440 440"
+                         role="img"
+                         aria-label="Original SVG house">
+
+                        <title>
+                            Original SVG House
+                        </title>
+
+                        <desc>
+                            A brown house with an orange roof,
+                            blue windows, a tree, a yellow sun
+                            and a curved path.
+                        </desc>
+
+                        <rect
+                            class="sky"
+                            x="0"
+                            y="0"
+                            width="440"
+                            height="267"
+                        />
+
+                        <rect
+                            class="ground"
+                            x="0"
+                            y="267"
+                            width="440"
+                            height="173"
+                        />
+
+                        <circle
+                            class="sun"
+                            cx="375"
+                            cy="72"
+                            r="30"
+                        />
+
+                        <rect
+                            class="tree-trunk"
+                            x="62"
+                            y="225"
+                            width="18"
+                            height="87"
+                        />
+
+                        <circle
+                            class="tree-leaves tree-leaves-left"
+                            cx="52"
+                            cy="194"
+                            r="26"
+                        />
+
+                        <circle
+                            class="tree-leaves"
+                            cx="90"
+                            cy="194"
+                            r="26"
+                        />
+
+                        <circle
+                            class="tree-leaves tree-leaves-center"
+                            cx="71"
+                            cy="214"
+                            r="25"
+                        />
+
+                        <path
+                            class="roof"
+                            d="M133 178 222 89 311 178Z"
+                        />
+
+                        <rect
+                            class="house-wall"
+                            x="133"
+                            y="178"
+                            width="178"
+                            height="134"
+                        />
+
+                        <rect
+                            class="window-frame"
+                            x="151"
+                            y="196"
+                            width="36"
+                            height="36"
+                        />
+
+                        <rect
+                            class="window-frame"
+                            x="258"
+                            y="196"
+                            width="36"
+                            height="36"
+                        />
+
+                        <rect
+                            class="door"
+                            x="204"
+                            y="241"
+                            width="36"
+                            height="71"
+                        />
+
+                        <circle
+                            class="door-knob"
+                            cx="231"
+                            cy="276"
+                            r="4.5"
+                        />
+
+                        <path
+                            class="path"
+                            d="M207 312C167 321 126 333 125 357c-1 22 35 35 81 79"
+                        />
+
+                        <path
+                            class="path"
+                            d="M222 312C181 323 145 335 145 354c0 20 39 35 101 82"
+                        />
+
+                        <text
+                            class="house-label"
+                            x="338"
+                            y="258"
+                        >
+                            House
+                        </text>
+
+                    </svg>
+
+                </div>
+
+
+                <div class="house-version">
+
+                    <h3>
+                        After Editing
+                    </h3>
+
+
+                    <svg class="house-svg"
+                         viewBox="0 0 440 440"
+                         role="img"
+                         aria-label="Edited SVG house">
+
+                        <title>
+                            Edited SVG House
+                        </title>
+
+                        <desc>
+                            An edited version of the original house
+                            with changed colours and a modified door.
+                        </desc>
+
+                        <rect
+                            class="sky"
+                            x="0"
+                            y="0"
+                            width="440"
+                            height="267"
+                        />
+
+                        <rect
+                            class="ground"
+                            x="0"
+                            y="267"
+                            width="440"
+                            height="173"
+                        />
+
+                        <circle
+                            class="sun"
+                            cx="375"
+                            cy="72"
+                            r="30"
+                        />
+
+                        <rect
+                            class="tree-trunk"
+                            x="62"
+                            y="225"
+                            width="18"
+                            height="87"
+                        />
+
+                        <circle
+                            class="tree-leaves tree-leaves-left"
+                            cx="52"
+                            cy="194"
+                            r="26"
+                        />
+
+                        <circle
+                            class="tree-leaves"
+                            cx="90"
+                            cy="194"
+                            r="26"
+                        />
+
+                        <circle
+                            class="tree-leaves tree-leaves-center"
+                            cx="71"
+                            cy="214"
+                            r="25"
+                        />
+
+                        <path
+                            d="M133 178 222 89 311 178Z"
+                            fill="#8B0000"
+                        />
+
+                        <rect
+                            x="133"
+                            y="178"
+                            width="178"
+                            height="134"
+                            fill="#4682B4"
+                        />
+
+                        <rect
+                            x="151"
+                            y="196"
+                            width="36"
+                            height="36"
+                            fill="#FFF2A8"
+                            stroke="#333"
+                            stroke-width="3"
+                        />
+
+                        <rect
+                            x="258"
+                            y="196"
+                            width="36"
+                            height="36"
+                            fill="#FFF2A8"
+                            stroke="#333"
+                            stroke-width="3"
+                        />
+
+                        <rect
+                            x="204"
+                            y="241"
+                            width="36"
+                            height="71"
+                            fill="#5C4033"
+                        />
+
+                        <circle
+                            cx="231"
+                            cy="276"
+                            r="4.5"
+                            fill="#FFD700"
+                        />
+
+                        <rect
+                            x="211"
+                            y="250"
+                            width="22"
+                            height="20"
+                            fill="#FFF2A8"
+                            stroke="#333"
+                            stroke-width="2"
+                        />
+
+                        <path
+                            class="path"
+                            d="M207 312C167 321 126 333 125 357c-1 22 35 35 81 79"
+                        />
+
+                        <path
+                            class="path"
+                            d="M222 312C181 323 145 335 145 354c0 20 39 35 101 82"
+                        />
+
+                        <text
+                            class="house-label"
+                            x="338"
+                            y="258"
+                        >
+                            My House
+                        </text>
+
+                    </svg>
+
+                </div>
+
+            </div>
+
 
             <table class="coordinate-table">
-                <caption>SVG element coordinates (viewBox: 440 x 440)</caption>
+
+                <caption>
+                    SVG element coordinates (viewBox: 440 x 440)
+                </caption>
+
                 <thead>
+
                     <tr>
-                        <th scope="col">Element</th>
-                        <th scope="col">Location</th>
-                        <th scope="col">Size or key points</th>
+
+                        <th scope="col">
+                            Element
+                        </th>
+
+                        <th scope="col">
+                            Location
+                        </th>
+
+                        <th scope="col">
+                            Size or key points
+                        </th>
+
                     </tr>
+
                 </thead>
+
                 <tbody>
+
                     <tr>
-                        <th scope="row">Sky</th>
-                        <td>x=0, y=0</td>
-                        <td>440 x 267</td>
+
+                        <th scope="row">
+                            Sky
+                        </th>
+
+                        <td>
+                            x=0, y=0
+                        </td>
+
+                        <td>
+                            440 x 267
+                        </td>
+
                     </tr>
+
                     <tr>
-                        <th scope="row">Ground</th>
-                        <td>x=0, y=267</td>
-                        <td>440 x 173</td>
+
+                        <th scope="row">
+                            Ground
+                        </th>
+
+                        <td>
+                            x=0, y=267
+                        </td>
+
+                        <td>
+                            440 x 173
+                        </td>
+
                     </tr>
+
                     <tr>
-                        <th scope="row">Sun</th>
-                        <td>cx=375, cy=72</td>
-                        <td>radius=30</td>
+
+                        <th scope="row">
+                            Sun
+                        </th>
+
+                        <td>
+                            cx=375, cy=72
+                        </td>
+
+                        <td>
+                            radius=30
+                        </td>
+
                     </tr>
+
                     <tr>
-                        <th scope="row">Tree trunk</th>
-                        <td>x=62, y=225</td>
-                        <td>18 x 87</td>
+
+                        <th scope="row">
+                            Tree trunk
+                        </th>
+
+                        <td>
+                            x=62, y=225
+                        </td>
+
+                        <td>
+                            18 x 87
+                        </td>
+
                     </tr>
+
                     <tr>
-                        <th scope="row">Roof</th>
-                        <td>starts at (133, 178)</td>
-                        <td>peak (222, 89), ends (311, 178)</td>
+
+                        <th scope="row">
+                            Roof
+                        </th>
+
+                        <td>
+                            starts at (133, 178)
+                        </td>
+
+                        <td>
+                            peak (222, 89), ends (311, 178)
+                        </td>
+
                     </tr>
+
                     <tr>
-                        <th scope="row">House wall</th>
-                        <td>x=133, y=178</td>
-                        <td>178 x 134</td>
+
+                        <th scope="row">
+                            House wall
+                        </th>
+
+                        <td>
+                            x=133, y=178
+                        </td>
+
+                        <td>
+                            178 x 134
+                        </td>
+
                     </tr>
+
                     <tr>
-                        <th scope="row">Windows</th>
-                        <td>(151, 196) and (258, 196)</td>
-                        <td>36 x 36 each</td>
+
+                        <th scope="row">
+                            Windows
+                        </th>
+
+                        <td>
+                            (151, 196) and (258, 196)
+                        </td>
+
+                        <td>
+                            36 x 36 each
+                        </td>
+
                     </tr>
+
                     <tr>
-                        <th scope="row">Door</th>
-                        <td>x=204, y=241</td>
-                        <td>36 x 71</td>
+
+                        <th scope="row">
+                            Door
+                        </th>
+
+                        <td>
+                            x=204, y=241
+                        </td>
+
+                        <td>
+                            36 x 71
+                        </td>
+
                     </tr>
+
                     <tr>
-                        <th scope="row">Label</th>
-                        <td>x=338, y=258</td>
-                        <td>House</td>
+
+                        <th scope="row">
+                            Label
+                        </th>
+
+                        <td>
+                            x=338, y=258
+                        </td>
+
+                        <td>
+                            House / My House
+                        </td>
+
                     </tr>
+
                 </tbody>
+
             </table>
+
         </section>
 
+
         <section class="content-section">
-            <h2>Energy Consumption in Australia</h2>
+
+            <h2>
+                Energy Consumption in Australia
+            </h2>
 
             <p>
                 Household appliances are an important part of everyday life in
@@ -143,34 +619,54 @@
             <div class="info-cards">
 
                 <div class="info-card">
-                    <h3>Energy Efficiency</h3>
+
+                    <h3>
+                        Energy Efficiency
+                    </h3>
+
                     <p>
                         Energy-efficient appliances can provide the same
                         functionality while using less electricity.
                     </p>
+
                 </div>
 
                 <div class="info-card">
-                    <h3>Usage Habits</h3>
+
+                    <h3>
+                        Usage Habits
+                    </h3>
+
                     <p>
                         How often and how long an appliance is used can have a
                         major impact on its total energy consumption.
                     </p>
+
                 </div>
 
                 <div class="info-card">
-                    <h3>Smart Choices</h3>
+
+                    <h3>
+                        Smart Choices
+                    </h3>
+
                     <p>
                         Comparing appliance energy ratings can help consumers
                         make more informed purchasing decisions.
                     </p>
+
                 </div>
 
             </div>
+
         </section>
 
+
         <section class="content-section alternate-section">
-            <h2>Why Energy Consumption Matters</h2>
+
+            <h2>
+                Why Energy Consumption Matters
+            </h2>
 
             <p>
                 Electricity consumption affects both household expenses and
@@ -185,80 +681,134 @@
                 information to consider both the initial purchase price and
                 the potential ongoing electricity costs.
             </p>
+
         </section>
 
+
         <section class="faq-section">
-            <h2>Frequently Asked Questions</h2>
+
+            <h2>
+                Frequently Asked Questions
+            </h2>
 
             <div class="faq-item">
+
                 <button class="faq-question">
+
                     What affects appliance energy consumption?
-                    <span>+</span>
+
+                    <span>
+                        +
+                    </span>
+
                 </button>
 
                 <div class="faq-answer">
+
                     <p>
                         Appliance energy consumption can be affected by the
                         appliance's power rating, how frequently it is used,
                         how long it operates and its energy efficiency.
                     </p>
+
                 </div>
+
             </div>
 
+
             <div class="faq-item">
+
                 <button class="faq-question">
+
                     How can households reduce energy consumption?
-                    <span>+</span>
+
+                    <span>
+                        +
+                    </span>
+
                 </button>
 
                 <div class="faq-answer">
+
                     <p>
                         Households can reduce energy consumption by choosing
                         efficient appliances, switching appliances off when
                         they are not needed and reducing unnecessary usage.
                     </p>
+
                 </div>
+
             </div>
 
+
             <div class="faq-item">
+
                 <button class="faq-question">
+
                     Why are energy ratings useful?
-                    <span>+</span>
+
+                    <span>
+                        +
+                    </span>
+
                 </button>
 
                 <div class="faq-answer">
+
                     <p>
                         Energy ratings provide consumers with information that
                         can help them compare the expected efficiency of
                         different appliances before making a purchase.
                     </p>
+
                 </div>
+
             </div>
 
+
             <div class="faq-item">
+
                 <button class="faq-question">
+
                     Do larger appliances always use more electricity?
-                    <span>+</span>
+
+                    <span>
+                        +
+                    </span>
+
                 </button>
 
                 <div class="faq-answer">
+
                     <p>
                         Not necessarily. Energy consumption depends on the
                         appliance's efficiency, power rating and usage patterns,
                         rather than size alone.
                     </p>
+
                 </div>
+
             </div>
 
         </section>
 
     </main>
 
+
     <footer>
-        <p>&copy; <span id="current-year"></span> Syed Adam Hamzah. ChatGPT Generative AI Used for Debugging.</p>
+
+        <p>
+            &copy;
+            <span id="current-year"></span>
+            Syed Adam Hamzah.
+            ChatGPT Generative AI Used for Debugging.
+        </p>
+
     </footer>
+
 
     <script src="JS/script.js"></script>
 
 </body>
+
 </html>
