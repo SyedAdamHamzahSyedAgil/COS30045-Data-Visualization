@@ -1,338 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Appliance Energy Consumption - Home</title>
 
     <link rel="stylesheet" href="CSS/style.css">
-
-    <style>
-        .d3-container {
-            margin-top: 20px;
-        }
-
-        .d3-svg {
-            display: block;
-            margin-top: 20px;
-            border: 1px solid #ccc;
-        }
-    </style>
-
 </head>
 
 <body>
 
     <header>
-
-        <nav class="navbar">
-
+        <div class="navbar">
             <a href="index.html" class="logo-link">
-                <img src="Images/PowerIcon.png"
-                     alt="Power Logo"
-                     class="logo">
+                <img src="Images/PowerIcon.png" alt="Power Icon" class="logo">
             </a>
 
-            <ul class="nav-links">
-
-                <li>
-                    <a href="index.html" class="active">
-                        Home
-                    </a>
-                </li>
-
-                <li>
-                    <a href="televisions.html">
-                        Televisions
-                    </a>
-                </li>
-
-                <li>
-                    <a href="about.html">
-                        About Us
-                    </a>
-                </li>
-
-            </ul>
-
-        </nav>
-
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="televisions.html">Televisions</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-
 
     <main>
 
         <section class="hero">
-
             <div class="hero-content">
-
-                <h1>
-                    Appliance Energy Consumption
-                </h1>
-
+                <h1>Appliance Energy Consumption</h1>
                 <p>
-                    Understanding how household appliances consume electricity
-                    can help Australian households make smarter and more
-                    energy-efficient choices.
+                    Understanding energy consumption can help you make better
+                    choices when purchasing and using household appliances.
                 </p>
-
-                <a href="televisions.html" class="button">
-                    Explore Televisions
-                </a>
-
             </div>
-
         </section>
 
+        <section class="d3-section">
+            <h2>D3 Visualisation</h2>
 
-        <section class="content-section">
-
-            <h2>
-                D3 Manipulation
-            </h2>
-
-            <p>
-                This section demonstrates how D3 can modify existing HTML
-                elements and add new elements to a webpage.
-            </p>
-
-
-            <div class="d3-container">
-
-                <p>
-                    This paragraph was written in HTML.
-                </p>
-
-            </div>
-
-
-            <h3>
-                D3 Generated SVG Rectangle
-            </h3>
-
-
-            <svg
-                class="d3-svg"
-                width="300"
-                height="120">
-            </svg>
-
+            <div class="responsive-svg-container"></div>
         </section>
 
-
         <section class="content-section">
-
-            <h2>
-                Energy Consumption in Australia
-            </h2>
-
-            <p>
-                Household appliances are an important part of everyday life in
-                Australia. Appliances such as televisions, refrigerators,
-                washing machines and air conditioners can contribute
-                significantly to household electricity consumption.
-            </p>
-
-            <p>
-                The amount of energy an appliance uses depends on several
-                factors, including its power rating, how frequently it is used,
-                how long it operates and its overall energy efficiency.
-                Understanding these factors can help households reduce
-                unnecessary electricity consumption.
-            </p>
-
+            <h2>Understanding Energy Consumption</h2>
 
             <div class="info-cards">
 
                 <div class="info-card">
-
-                    <h3>
-                        Energy Efficiency
-                    </h3>
-
+                    <h3>Energy Efficiency</h3>
                     <p>
-                        Energy-efficient appliances can provide the same
-                        functionality while using less electricity.
+                        Energy-efficient appliances use less electricity while
+                        providing the same level of performance.
                     </p>
-
                 </div>
 
-
                 <div class="info-card">
-
-                    <h3>
-                        Usage Habits
-                    </h3>
-
+                    <h3>Energy Ratings</h3>
                     <p>
-                        How often and how long an appliance is used can have a
-                        major impact on its total energy consumption.
+                        Energy star ratings help consumers compare the
+                        efficiency of different appliances.
                     </p>
-
                 </div>
 
-
                 <div class="info-card">
-
-                    <h3>
-                        Smart Choices
-                    </h3>
-
+                    <h3>Lower Energy Bills</h3>
                     <p>
-                        Comparing appliance energy ratings can help consumers
-                        make more informed purchasing decisions.
+                        Choosing efficient appliances can help reduce
+                        electricity consumption and energy costs.
                     </p>
-
                 </div>
 
             </div>
-
         </section>
 
+        <section class="content-section">
+            <h2>Why Does Energy Consumption Matter?</h2>
+
+            <p>
+                Household appliances can contribute significantly to
+                electricity usage. Understanding energy consumption allows
+                consumers to make informed decisions about appliance purchases
+                and everyday energy use.
+            </p>
+        </section>
 
         <section class="content-section alternate-section">
-
-            <h2>
-                Why Energy Consumption Matters
-            </h2>
+            <h2>Make Energy-Efficient Choices</h2>
 
             <p>
-                Electricity consumption affects both household expenses and
-                the environment. Reducing unnecessary energy use can help
-                households manage electricity costs while also supporting
-                Australia's broader energy-efficiency goals.
+                Consider energy ratings, screen size and expected usage when
+                selecting a television or other household appliance.
             </p>
+        </section>
+
+       <section class="faq-section">
+
+    <h2>
+        Frequently Asked Questions
+    </h2>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+
+            What affects appliance energy consumption?
+
+            <span>
+                +
+            </span>
+
+        </button>
+
+        <div class="faq-answer">
 
             <p>
-                Energy labels and product specifications can provide useful
-                information when comparing appliances. Consumers can use this
-                information to consider both the initial purchase price and
-                the potential ongoing electricity costs.
+                Appliance energy consumption can be affected by the
+                appliance's power rating, how frequently it is used,
+                how long it operates and its energy efficiency.
             </p>
 
-        </section>
+        </div>
 
+    </div>
 
-        <section class="faq-section">
+    <div class="faq-item">
 
-            <h2>
-                Frequently Asked Questions
-            </h2>
+        <button class="faq-question">
 
+            How can households reduce energy consumption?
 
-            <div class="faq-item">
+            <span>
+                +
+            </span>
 
-                <button class="faq-question">
+        </button>
 
-                    What affects appliance energy consumption?
+        <div class="faq-answer">
 
-                    <span>+</span>
+            <p>
+                Households can reduce energy consumption by choosing
+                efficient appliances, switching appliances off when
+                they are not needed and reducing unnecessary usage.
+            </p>
 
-                </button>
+        </div>
 
-                <div class="faq-answer">
+    </div>
 
-                    <p>
-                        Appliance energy consumption can be affected by the
-                        appliance's power rating, how frequently it is used,
-                        how long it operates and its energy efficiency.
-                    </p>
+    <div class="faq-item">
 
-                </div>
+        <button class="faq-question">
 
-            </div>
+            Why are energy ratings useful?
 
+            <span>
+                +
+            </span>
 
-            <div class="faq-item">
+        </button>
 
-                <button class="faq-question">
+        <div class="faq-answer">
 
-                    How can households reduce energy consumption?
+            <p>
+                Energy ratings provide consumers with information that
+                can help them compare the expected efficiency of
+                different appliances before making a purchase.
+            </p>
 
-                    <span>+</span>
+        </div>
 
-                </button>
+    </div>
 
-                <div class="faq-answer">
+    <div class="faq-item">
 
-                    <p>
-                        Households can reduce energy consumption by choosing
-                        efficient appliances, switching appliances off when
-                        they are not needed and reducing unnecessary usage.
-                    </p>
+        <button class="faq-question">
 
-                </div>
+            Do larger appliances always use more electricity?
 
-            </div>
+            <span>
+                +
+            </span>
 
+        </button>
 
-            <div class="faq-item">
+        <div class="faq-answer">
 
-                <button class="faq-question">
+            <p>
+                Not necessarily. Energy consumption depends on the
+                appliance's efficiency, power rating and usage patterns,
+                rather than size alone.
+            </p>
 
-                    Why are energy ratings useful?
+        </div>
 
-                    <span>+</span>
+    </div>
 
-                </button>
-
-                <div class="faq-answer">
-
-                    <p>
-                        Energy ratings provide consumers with information that
-                        can help them compare the expected efficiency of
-                        different appliances before making a purchase.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-
-                    Do larger appliances always use more electricity?
-
-                    <span>+</span>
-
-                </button>
-
-                <div class="faq-answer">
-
-                    <p>
-                        Not necessarily. Energy consumption depends on the
-                        appliance's efficiency, power rating and usage patterns,
-                        rather than size alone.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
+</section>
     </main>
 
-
     <footer>
-
         <p>
-            &copy;
-            <span id="current-year"></span>
-            Syed Adam Hamzah.
-            ChatGPT Generative AI Used for Debugging.
+            &copy; <span id="current-year"></span>
+            Syed Adam Hamzah. ChatGPT Generative AI Used for Debugging.
         </p>
-
     </footer>
-
 
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="JS/main.js"></script>
     <script src="JS/script.js"></script>
 
 </body>
-
 </html>

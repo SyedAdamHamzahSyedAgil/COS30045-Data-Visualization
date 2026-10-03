@@ -107,6 +107,32 @@ main {
     max-width: 800px;
 }
 
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #C76E00;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #e8f4fc;
+    transform: translateY(-2px);
+}
+
 .svg-section {
     max-width: 1100px;
     margin: 0 auto;
@@ -188,7 +214,7 @@ main {
     fill: #000000;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-
+}
 
 .coordinate-table {
     width: 100%;
@@ -198,7 +224,6 @@ main {
     background-color: #ffffff;
     text-align: left;
     font-size: 15px;
-}
 }
 
 .coordinate-table caption {
@@ -226,31 +251,6 @@ main {
 
 .coordinate-table tbody tr:nth-child(even) td {
     background-color: #f2f7fa;
-}
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-.button {
-    display: inline-block;
-    background-color: #ffffff;
-    color: #C76E00;
-    text-decoration: none;
-    padding: 13px 25px;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.button:hover {
-    background-color: #e8f4fc;
-    transform: translateY(-2px);
 }
 
 .page-header {
@@ -432,6 +432,44 @@ tr:hover {
     margin-bottom: 40px;
 }
 
+.house-comparison {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.house-version {
+    text-align: center;
+}
+
+.house-version h3 {
+    margin-bottom: 15px;
+}
+
+.house-version .house-svg {
+    width: 100%;
+    max-width: 440px;
+    height: auto;
+}
+
+.d3-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.responsive-svg-container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.responsive-svg-container svg {
+    width: 100%;
+    height: auto;
+}
+
 footer {
     background-color: #C76E00;
     color: #ffffff;
@@ -442,6 +480,13 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+@media (max-width: 800px) {
+
+    .house-comparison {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
@@ -539,31 +584,4 @@ footer p {
         padding: 10px;
         font-size: 14px;
     }
-
-    .house-comparison {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.house-version {
-    text-align: center;
-}
-
-.house-version h3 {
-    margin-bottom: 15px;
-}
-
-.house-version .house-svg {
-    width: 100%;
-    max-width: 440px;
-    height: auto;
-}
-
-@media (max-width: 800px) {
-    .house-comparison {
-        grid-template-columns: 1fr;
-    }
-}
 }

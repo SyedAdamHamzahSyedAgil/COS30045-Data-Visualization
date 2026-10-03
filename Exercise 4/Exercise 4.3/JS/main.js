@@ -1,14 +1,12 @@
-d3.select("h1")
-    .style("color", "green");
+const svg = d3.select(".responsive-svg-container")
+    .append("svg")
+    .attr("viewBox", "0 0 1200 1600")
+    .style("border", "1px solid black");
 
-d3.select(".d3-container")
-    .append("p")
-    .text("This is to Simulate the Text of the Paragraph");
-
-d3.select(".d3-svg")
+svg
     .append("rect")
-    .attr("x", 50)
-    .attr("y", 30)
-    .attr("width", 150)
-    .attr("height", 50)
-    .style("fill", "green");
+    .attr("x", 10)
+    .attr("y", 10)
+    .attr("width", 414)
+    .attr("height", 16)
+    .attr("fill", "blue");
