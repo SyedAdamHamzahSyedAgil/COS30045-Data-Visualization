@@ -1,4 +1,3 @@
-
 const drawBarChart = data => {
 
     const margin = {
@@ -21,7 +20,10 @@ const drawBarChart = data => {
         .attr("height", height)
         .attr("viewBox", `0 0 ${width} ${height}`)
         .attr("role", "img")
-        .attr("aria-label", "Bar chart comparing average energy consumption of LCD, LED and OLED 55-inch televisions");
+        .attr(
+            "aria-label",
+            "Bar chart comparing average energy consumption of LCD, LED and OLED 55-inch televisions"
+        );
 
     const innerChart = svg
         .append("g")
@@ -94,14 +96,16 @@ const drawBarChart = data => {
         .data(data)
         .join("text")
         .attr("class", "bar-label")
-        .attr("x", d => xScale(d.screenTech) + xScale.bandwidth() / 2)
+        .attr(
+            "x",
+            d => xScale(d.screenTech) + xScale.bandwidth() / 2
+        )
         .attr("y", d => yScale(d.energy) - 10)
         .attr("text-anchor", "middle")
         .text(d => d.energy.toFixed(1));
-
 };
 
-d3.csv("data/Data_exercise 5.1-1.csv", d => {
+d3.csv("Data/Data_exercise 5.1-1.csv", d => {
 
     return {
         screenTech: d.Screen_Tech.toUpperCase(),
@@ -112,12 +116,12 @@ d3.csv("data/Data_exercise 5.1-1.csv", d => {
 
     data.sort((a, b) => d3.descending(a.energy, b.energy));
 
-    console.log("Loaded data:", data);
+    console.log("Loaded bar chart data:", data);
 
     drawBarChart(data);
 
 }).catch(error => {
 
-    console.error("Error loading CSV:", error);
+    console.error("BAR CHART ERROR:", error);
 
 });

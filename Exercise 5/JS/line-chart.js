@@ -13,19 +13,16 @@ const drawLineChart = data => {
     const innerWidth = width - margin.left - margin.right;
     const innerHeight = height - margin.top - margin.bottom;
 
-
     const xScale = d3
         .scaleLinear()
         .domain(d3.extent(data, d => d.year))
         .range([0, innerWidth]);
-
 
     const yScale = d3
         .scaleLinear()
         .domain([0, d3.max(data, d => d.averagePrice)])
         .nice()
         .range([innerHeight, 0]);
-
 
     const svg = d3
         .select("#line-chart")
@@ -34,7 +31,6 @@ const drawLineChart = data => {
         .attr("height", height)
         .attr("viewBox", `0 0 ${width} ${height}`);
 
-
     const innerChart = svg
         .append("g")
         .attr(
@@ -42,16 +38,13 @@ const drawLineChart = data => {
             `translate(${margin.left}, ${margin.top})`
         );
 
-
     const xAxis = d3
         .axisBottom(xScale)
         .ticks(10)
         .tickFormat(d3.format("d"));
 
-
     const yAxis = d3
         .axisLeft(yScale);
-
 
     innerChart
         .append("g")
@@ -62,12 +55,10 @@ const drawLineChart = data => {
         )
         .call(xAxis);
 
-
     innerChart
         .append("g")
         .attr("class", "y-axis")
         .call(yAxis);
-
 
     innerChart
         .append("text")
@@ -78,7 +69,6 @@ const drawLineChart = data => {
         .attr("text-anchor", "middle")
         .text("Average Spot Price ($/MWh)");
 
-
     innerChart
         .append("text")
         .attr("class", "axis-label")
@@ -87,7 +77,6 @@ const drawLineChart = data => {
         .attr("text-anchor", "middle")
         .text("Year");
 
-
     innerChart
         .selectAll(".data-point")
         .data(data)
@@ -95,15 +84,12 @@ const drawLineChart = data => {
         .attr("class", "data-point")
         .attr("r", 5)
         .attr("cx", d => xScale(d.year))
-        .attr("cy", d => yScale(d.averagePrice))
-        .attr("fill", "steelblue");
-
+        .attr("cy", d => yScale(d.averagePrice));
 
     const lineGenerator = d3
         .line()
         .x(d => xScale(d.year))
         .y(d => yScale(d.averagePrice));
-
 
     innerChart
         .append("path")
@@ -113,14 +99,9 @@ const drawLineChart = data => {
         .attr("fill", "none")
         .attr("stroke", "steelblue")
         .attr("stroke-width", 3);
-
-
 };
 
-
-d3.csv("data/ARE_Spot_Prices.csv", d => {
-
-    console.log("CSV row:", d);
+d3.csv("Data/ARE_Spot_Prices.csv", d => {
 
     return {
         year: +d.Year,
@@ -130,9 +111,6 @@ d3.csv("data/ARE_Spot_Prices.csv", d => {
 }).then(data => {
 
     console.log("Processed line chart data:", data);
-
-    console.log("First year:", data[0].year);
-    console.log("First average price:", data[0].averagePrice);
 
     drawLineChart(data);
 
